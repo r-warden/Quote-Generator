@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Random Quote Generator: Inspired in Seconds</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./assets/style.css">
   </head>
 
 <body class="has-background-link-dark is-overlay">
@@ -16,10 +16,11 @@
     <section class="section is-large">
     <div class="card has-background-light mb-auto is-relative is-responsive has-text-centered">
       
-     <span>Quote Appears Here</span>
+     <span id="quote">Quote Appears Here</span>
+     <span id="author"></span>
     </div> 
 
-<button class="button is-primary is-medium is-responsive is-flex is-clickable is-relative mt-2">
+<button id="get-quote" class="button is-primary is-medium is-responsive is-flex is-clickable is-relative mt-2">
             Get Quote
 </button>
 
