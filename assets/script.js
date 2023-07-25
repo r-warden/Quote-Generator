@@ -1,9 +1,11 @@
 var getQuoteBtn = document.getElementById("get-quote");
 var quoteEl = document.getElementById("quote");
 var authorEl = document.getElementById("author");
+var quoteArea = document.getElementById("quote-area");
 
-var category = random_category();
-var gitArthor = function (category) {
+var gitArthor = function gitArthor(event) {
+  event.preventDefault();
+  var category = random_category();
   fetch("https://api.api-ninjas.com/v1/quotes?category=" + category, {
     method: "GET", //GET is the default.
     headers: { "X-Api-Key": "s6+WMAEYzVKHWRIkfCszQQ==uBXREA4OMYGwbEC8" },
@@ -19,8 +21,12 @@ var gitArthor = function (category) {
       var author = data[0].author.toString();
       authorEl.textContent = " -" + author;
       console.log(author);
-      var names = author;
-      arthorInfo(names);
+      var authorInfoBtn = document.createElement("button");
+      authorInfoBtn.textContent = "Learn more about author";
+      authorInfoBtn.addEventListener("click", function(){
+          arthorInfo(author);
+      });
+      quoteArea.appendChild(authorInfoBtn);
     });
 };
 
@@ -130,4 +136,4 @@ function random_category() {
   return categories[Math.floor(Math.random() * categories.length)];
 }
 
-getQuoteBtn.addEventListener("click", gitArthor(category));
+getQuoteBtn.addEventListener("click", gitArthor);
