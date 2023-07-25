@@ -51,6 +51,3 @@ var arthorInfo = function(names) {
             });
         }
       });
-}
-
-gitArthor(category) 
