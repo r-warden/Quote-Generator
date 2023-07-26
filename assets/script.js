@@ -19,14 +19,21 @@ var gitArthor = function gitArthor(event) {
       quoteEl.textContent = quote;
 
       var author = data[0].author.toString();
-      authorEl.textContent = " -" + author;
+
+      //creating a link to the wikipedia page of the quote's author for the preview
+      var authorLink = document.createElement("a");
+      var wikiAuthor = author.replace(" ", "_");
+      authorLink.href = "https://en.wikipedia.org/wiki/" + wikiAuthor;
+      authorLink.textContent = author;
+
+      authorEl.textContent = " -";
       console.log(author);
-      var authorInfoBtn = document.createElement("button");
-      authorInfoBtn.textContent = "Learn more about author";
-      authorInfoBtn.addEventListener("click", function(){
-          arthorInfo(author);
+      authorEl.appendChild(authorLink);
+
+      //calls the wiki preview functionality to detect any links to wiki pages
+      wikipediaPreview.init({
+        detectLinks: true,
       });
-      quoteArea.appendChild(authorInfoBtn);
     });
 };
 
@@ -137,3 +144,4 @@ function random_category() {
 }
 
 getQuoteBtn.addEventListener("click", gitArthor);
+
