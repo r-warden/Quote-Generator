@@ -29,6 +29,7 @@ var gitArthor = function gitArthor(event) {
       authorEl.textContent = " -";
       console.log(author);
       authorEl.appendChild(authorLink);
+      document.getElementById("wiki-preview-notice").style.visibility = "visible";
 
       //calls the wiki preview functionality to detect any links to wiki pages
       wikipediaPreview.init({

@@ -1,1 +1,5 @@
-
+#wiki-preview-notice {
+    font-style: italic;
+    visibility: hidden;
+    font-size: 12px;
+}
