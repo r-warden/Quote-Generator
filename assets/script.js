@@ -5,8 +5,9 @@ var quoteArea = document.getElementById("quote-area");
 var savequotebtn = document.getElementById("save-quote");
 var currentquote = "";
 var currentauthor = "";
-var fact1 = "Born:";
-var fact2 = "Title/Occupation";
+var fact1 = "";
+var fact2 = "";
+
 var getAuthor = function getAuthor(event) {
   event.preventDefault();
   var category = random_category();
@@ -22,7 +23,10 @@ var getAuthor = function getAuthor(event) {
       console.log(data);
       var quote = data[0].quote;
       quoteEl.textContent = quote;
-      savequotebtn.setAttribute("class", "button is-primary is-medium is-responsive is-flex is-clickable is-relative mt-2");
+      savequotebtn.setAttribute(
+        "class",
+        "button is-primary is-medium is-responsive is-flex is-clickable is-relative mt-2"
+      );
       var author = data[0].author.toString();
       currentquote = quote;
       currentauthor = author;
@@ -34,7 +38,8 @@ var getAuthor = function getAuthor(event) {
       authorEl.textContent = " -";
       console.log(author);
       authorEl.appendChild(authorLink);
-      document.getElementById("wiki-preview-notice").style.visibility = "visible";
+      document.getElementById("wiki-preview-notice").style.visibility =
+        "visible";
       //calls the wiki preview functionality to detect any links to wiki pages
       wikipediaPreview.init({
         detectLinks: true,
@@ -51,27 +56,39 @@ var authorInfo = function () {
       return response.json();
     })
     .then(function (data) {
-      console.log(data[0]);
       if (data[0]) {
-      fact1 = data[0].occupation[0];
-      fact2 = data[0].birthday;}
-      if (data[0] === undefined) {
-        fetch("https://api.api-ninjas.com/v1/historicalfigures?name=" + currentauthor, {
-          method: "GET",
-          headers: {
-            "X-Api-Key": "s6+WMAEYzVKHWRIkfCszQQ==uBXREA4OMYGwbEC8",
-          },
-          contentType: "application/json",
-        })
+        fact1 = data[0].occupation[0];
+        fact2 = data[0].birthday;
+        savequote();
+        console.log(fact1);
+        console.log(fact2);
+      } else if (data[0] === undefined) {
+        fetch(
+          "https://api.api-ninjas.com/v1/historicalfigures?name=" +
+            currentauthor,
+          {
+            method: "GET",
+            headers: {
+              "X-Api-Key": "s6+WMAEYzVKHWRIkfCszQQ==uBXREA4OMYGwbEC8",
+            },
+            contentType: "application/json",
+          }
+        )
           .then(function (response) {
             return response.json();
           })
           .then(function (data) {
             console.log(data[0]);
             if (data[0]) {
-             fact1 = data[0].title;
-             fact2 = data[0].info.born;}
-            if (data[0] === undefined) {
+              fact1 = data[0].title;
+              fact2 = data[0].info.born;
+              savequote();
+              console.log(fact1);
+              console.log(fact2);
+            } else {
+              fact1 = "See Wikapedia Article";
+              fact2 = "See Wikapedia Article";
+              savequote();
             }
           });
       }
@@ -149,13 +166,19 @@ function random_category() {
   ];
   return categories[Math.floor(Math.random() * categories.length)];
 }
+
 function savequote() {
-var savedquote = JSON.parse(window.localStorage.getItem("SavedQuotes")) || [];
-authorInfo();
-var quote = {quotesX: currentquote, name: currentauthor, fact1: fact1, fact2: fact2
-};
-savedquote.push(quote);
-window.localStorage.setItem("SavedQuotes", JSON.stringify(savedquote));
+  var savedquote = JSON.parse(window.localStorage.getItem("SavedQuotes")) || [];
+  console.log(fact1);
+  console.log(fact2);
+  var quote = {
+    quotesX: currentquote,
+    name: currentauthor,
+    dob: fact2,
+    title: fact1,
+  };
+  savedquote.push(quote);
+  window.localStorage.setItem("SavedQuotes", JSON.stringify(savedquote));
 }
+savequotebtn.addEventListener("click", authorInfo);
 getQuoteBtn.addEventListener("click", getAuthor);
-savequotebtn.addEventListener("click", savequote);
