@@ -22,10 +22,10 @@ var getAuthor = function getAuthor(event) {
     .then(function (data) {
       console.log(data);
       var quote = data[0].quote;
-      quoteEl.textContent = quote;
+      quoteEl.textContent = '"'  + quote + '"';
       savequotebtn.setAttribute(
         "class",
-        "button is-primary is-medium is-responsive is-flex is-clickable is-relative mt-2"
+        "button is-medium is-responsive is-flex is-clickable is-relative mt-2"
       );
       var author = data[0].author.toString();
       currentquote = quote;
@@ -41,6 +41,8 @@ var getAuthor = function getAuthor(event) {
       document.getElementById("wiki-preview-notice").style.visibility =
         "visible";
       //calls the wiki preview functionality to detect any links to wiki pages
+      document.getElementById("quote").style.textAlign =
+        "left";
       wikipediaPreview.init({
         detectLinks: true,
       });

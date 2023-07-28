@@ -18,28 +18,28 @@
 
       <a href="./quotes.html"
         ><button
-          class="button is-primary is-medium is-responsive is-flex is-clickable is-relative m-4 column"
+          class="button is-medium is-responsive is-flex is-clickable is-relative m-4 column"
         >
           Saved Quotes
         </button></a
       >
     </header>
     <section class="section is-large">
-      <div
-        id="quote-area"
-        class="card has-background-light mb-auto is-relative is-responsive has-text-centered"
-      >
-        <p id="quote">Quote Appears Here</p>
-        <p id="author"></p>
-        <span id="wiki-preview-notice"
-          >Hover over the author's name for info from their Wiki page.</span
-        >
+      <div class="columns">
+      <div id="quote-area" class="card has-background-light column is-6 mb-auto is-relative is-responsive">
+        <div class="card-content">
+         <p id="quote" class="title">Your Quote Appears Here</p>
+         <p id="author" class="subtitle"></p>
+         <p id="wiki-preview-notice"
+          >Hover over the author's name for info from their Wiki page.</p>
+        </div>
+      </div>
       </div>
       <div class="columns">
         <div class="column is-2">
           <button
             id="get-quote"
-            class="button is-primary is-medium is-responsive is-flex is-clickable is-relative mt-2"
+            class="button is-medium is-responsive is-flex is-clickable is-relative mt-2"
           >
             Get Quote
           </button>
