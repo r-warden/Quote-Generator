@@ -1,41 +1,61 @@
 <!DOCTYPE html>
-<html lang="en-us">
+<html class="has-background-link-dark is-overlay" lang="en-us">
   <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Random Quote Generator: Inspired in Seconds</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
-    <link rel="stylesheet" href="./assets/style.css">
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css"
+    />
+    <link rel="stylesheet" href="./assets/style.css" />
   </head>
 
-<body class="has-background-link-dark is-overlay">
-    <h1 class="title has-text-warning">
-        Random Quote Generator
-    </h1>
-    
-    <a href="./quotes.html"><button class="button is-primary is-medium is-responsive is-flex is-clickable is-relative mt-2">Saved Quotes</button></a>
+  <body>
+    <header class="columns">
+      <h1 class="title has-text-warning column m-4">Random Quote Generator</h1>
 
+      <a href="./quotes.html"
+        ><button
+          class="button is-primary is-medium is-responsive is-flex is-clickable is-relative m-4 column"
+        >
+          Saved Quotes
+        </button></a
+      >
+    </header>
     <section class="section is-large">
-    <div id="quote-area" class="card has-background-light mb-auto is-relative is-responsive has-text-centered">
-      
-     <p id="quote">Quote Appears Here</p>
-     <p id="author"></p>
-     <span id="wiki-preview-notice">Hover over the author's name for info from their Wiki page.</span>
-    </div> 
-
-<button id="get-quote" class="button is-primary is-medium is-responsive is-flex is-clickable is-relative mt-2">
+      <div
+        id="quote-area"
+        class="card has-background-light mb-auto is-relative is-responsive has-text-centered"
+      >
+        <p id="quote">Quote Appears Here</p>
+        <p id="author"></p>
+        <span id="wiki-preview-notice"
+          >Hover over the author's name for info from their Wiki page.</span
+        >
+      </div>
+      <div class="columns">
+        <div class="column is-2">
+          <button
+            id="get-quote"
+            class="button is-primary is-medium is-responsive is-flex is-clickable is-relative mt-2"
+          >
             Get Quote
-</button>
+          </button>
+        </div>
+        <div class="column is-2">
+          <button
+            id="save-quote"
+            class="button is-primary is-medium is-responsive is-flex is-clickable is-hidden is-relative mt-2"
+          >
+            Save Quote
+          </button>
+        </div>
+      </div>
+    </section>
 
-<button id="save-quote" class="button is-primary is-medium is-responsive is-flex is-clickable is-hidden is-relative mt-2">
-  Save Quote
-</button>
-
-</section>
-
-<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-<script src="./Assets/js/wikipedia-preview.production.js"></script>
-<script src="assets/script.js"></script>
-
-</body>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="./Assets/js/wikipedia-preview.production.js"></script>
+    <script src="assets/script.js"></script>
+  </body>
 </html>
