@@ -32,7 +32,7 @@ var getAuthor = function getAuthor(event) {
       currentauthor = author;
       //creating a link to the wikipedia page of the quote's author for the preview
       var authorLink = document.createElement("a");
-      var wikiAuthor = author.replace(" ", "_");
+      var wikiAuthor = author.replaceAll(" ", "_");
       authorLink.href = "https://en.wikipedia.org/wiki/" + wikiAuthor;
       authorLink.textContent = author;
       authorEl.textContent = " -";

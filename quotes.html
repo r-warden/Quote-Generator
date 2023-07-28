@@ -1,20 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css"
-    />
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Favorite Quotes</title>
-  </head>
-  <body>
-    <header>
-      <h1>Favorite Quotes & Author Information</h1>
-    </header>
-    <main id="saved-quotes" class="saved-quotes"></main>
-    <script src="assets/script.js"></script>
-  </body>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <link rel="stylesheet" href="./assets/style.css">
+</head>
+
+<body class="has-background-link-dark is-overlay">
+    <h1 class="title has-text-warning">
+        Saved quotes
+    </h1>
+
+<section class="section is-large">
+    <div id="quotes">
+
+    
+    </div>
+
+    <a href="index.html"><button class="button is-primary is-medium is-responsive is-flex is-clickable is-relative mt-2">Go Back</button></a>
+    <button  class="button is-primary is-medium is-responsive is-flex is-clickable is-relative mt-2" id="clear">Clear History</button>
+
+
+</section>
+
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script src="assets/saved.js"></script>
+
+</body>
+
 </html>
