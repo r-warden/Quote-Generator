@@ -3,9 +3,12 @@ html {
 }
 
 header {
-    background-image: linear-gradient(to right, #365E81, #4279A9, #8EB6D9);
-    border-radius: 20px;
+    background-image: linear-gradient(to right, #60479b, #b8a3cc, #6884c0);
     font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+#page-title {
+    color: aliceblue;
 }
 
 #quote {
@@ -24,5 +27,7 @@ header {
     text-align: center;
 }
 
-
-
+#hero-banner {
+    background-image: linear-gradient(to right, #60479b, #b8a3cc, #6884c0);
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}

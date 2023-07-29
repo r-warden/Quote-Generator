@@ -13,11 +13,11 @@
 
   <body>
     <header class="columns">
-      <h1 class="title column m-4">Random Quote Generator</h1>
+      <h1 id="page-title" class="title column m-4">Random Quote Generator</h1>
     </header>
 
     <section class="section is-large">
-      <div class="columns is-centered">
+      <div class="columns is-responsive is-centered">
       <div id="quote-area" class="card column is-6 mb-auto is-responsive">
         <div class="card-content">
          <p id="quote" class="title">Your Quote Appears Here</p>
@@ -27,20 +27,18 @@
         <footer class="card-footer">
           <button id="get-quote" class="button card-footer-item is-medium is-responsive is-relative is-flex is-clickable">Get Quote</button>
           <button id="save-quote" class="button card-footer-item is-medium is-clickable js-modal-trigger modal" data-target="modal-js-example">Save Quote</button>
-          <button class="button card-footer-item is-medium is-responsive is-relative is-flex is-clickable">View Saved Quotes</button>
+          <a href=./quotes.html class="button card-footer-item is-medium is-responsive is-relative is-flex is-clickable">View Saved Quotes</a>
         </footer>
       </div>
       </div>
 
-      <div class="columns">
-        <div class="column is-2">
-          
-        </div>
-        <div class="column is-2">
-          
-        </div>
-      </div>
     </section>
+    <section id="hero-banner" class="hero is-medium">
+    <div class="hero-body">
+      <div class="hero-foot">
+      </div>
+    </div>
+  </section>
     <div id="modal-js-example" class="modal">
   <div class="modal-background"></div>
 
@@ -50,7 +48,6 @@
       <button class="modal-close is-medium is-responsive" aria-label="close"></button>
     </div>
   </div>
-
   
 </div>
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
