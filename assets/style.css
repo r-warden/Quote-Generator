@@ -2,6 +2,11 @@ html {
     background-color: #F3E4C1;
 }
 
+body {
+    min-height: 100vh;
+    margin: 0 auto;
+}
+
 header {
     background-image: linear-gradient(to right, #60479b, #b8a3cc, #6884c0);
     font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
@@ -31,4 +36,9 @@ header {
     background-image: linear-gradient(to right, #60479b, #b8a3cc, #6884c0);
     font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     align-items: end;
+}
+
+/*quotes.html Styling*/
+#quotes {
+    flex-wrap: wrap
 }
