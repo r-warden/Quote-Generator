@@ -25,7 +25,7 @@ var getAuthor = function getAuthor(event) {
       quoteEl.textContent = '"'  + quote + '"';
       savequotebtn.setAttribute(
         "class",
-        "button is-medium is-responsive is-flex is-clickable is-relative mt-2"
+        "button card-footer-item is-medium is-clickable"
       );
       var author = data[0].author.toString();
       currentquote = quote;

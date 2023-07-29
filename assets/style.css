@@ -1,18 +1,28 @@
-#wiki-preview-notice {
-    font-style: italic;
-    visibility: hidden;
-    font-size: 12px;
-    text-align: center;
+html {
+    background-color: #F3E4C1;
 }
 
 header {
-    background-image: linear-gradient(to right, hsl(217, 71%, 53%) , #FEEEA4);
+    background-image: linear-gradient(to right, #365E81, #4279A9, #8EB6D9);
+    border-radius: 20px;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
 #quote {
     text-align: center;
+    font-family: Georgia, Times, 'Times New Roman', serif
 }
 
 #author {
     text-align: right;
+    font-family: Georgia, 'Times New Roman', Times, serif
 }
+
+#wiki-preview-notice {
+    font-style: italic;
+    visibility: hidden;
+    text-align: center;
+}
+
+
+
