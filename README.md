@@ -55,7 +55,7 @@ Project was created with:
 ![Retrieved-Quote-Wiki](/assets/images/image-2.png "Quote Generated Screen")
 ![Wikipedia-Functionality](/assets/images/image-4.png "Author Mouseover")
 ![Confirmed-Save](/assets/images/image-3.png "Quote Is Saved")
-![Saved-Quotes-Wiki]()
+![Saved-Quotes-Wiki](/assets/images/image.png "Saved Quotes Page")
 
 ## Deployed Webpage
 
