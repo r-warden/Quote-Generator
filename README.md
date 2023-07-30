@@ -1,4 +1,4 @@
-# Team4-Proj1 ![](https://img.shields.io/badge/contributers-5-blue?logo=github)
+# Random Quote Generator ![](https://img.shields.io/badge/contributers-5-blue?logo=github)
 
 ## Project Title
 
