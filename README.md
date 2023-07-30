@@ -51,7 +51,7 @@ Project was created with:
 
 ## Screenshots
 
-![Index-Page]()
+![Index-Page](!["Index Page"](image.png))
 ![Retreived-Quote-Wiki]()
 ![Confirmed-Save]()
 ![Saved-Quotes-Wiki]()
