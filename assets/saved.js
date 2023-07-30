@@ -10,7 +10,7 @@ function printQuotes() {
     var fact1 = document.createElement("P");
     var fact2 = document.createElement("p");
     quoteline.textContent = quote.quotesX;
-    author.textContent = quote.author;
+    author.textContent = "Author: " + quote.name;
     fact2.textContent = "Born: " + quote.dob;
     fact1.textContent = "Title: " + quote.title.replaceAll("_", " ");
     oneQuoteEl.setAttribute(
