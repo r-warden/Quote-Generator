@@ -1,15 +1,11 @@
 html {
     background-color: #F3E4C1;
-}
-
-body {
-    min-height: 100vh;
-    margin: 0 auto;
+    background-image: url('/assets/desert_night.jpg');
 }
 
 header {
-    background-image: linear-gradient(to right, #60479b, #b8a3cc, #6884c0);
-    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background-image: linear-gradient(to right, #5b5480, #ab91bc, #8798bc);
+    
 }
 
 #page-title {
@@ -33,9 +29,16 @@ header {
 }
 
 #hero-banner {
-    background-image: linear-gradient(to right, #60479b, #b8a3cc, #6884c0);
+    background-image: linear-gradient(to left, #5b5480, #ab91bc, #8798bc);
     font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     align-items: end;
+}
+
+@media screen and (max-width: 1023px) {
+    #hero-banner {
+        display: none;
+    }
+    
 }
 
 /*quotes.html Styling*/
@@ -43,8 +46,9 @@ header {
     flex-wrap: wrap
 }
 
-@media screen and (max-width: 450px) {
+@media screen and (max-width:768px) {
     #quotes {
-        flex-direction: column
+        flex-direction: column;
+        margin: 0;
     }
 }

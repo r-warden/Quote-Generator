@@ -15,7 +15,7 @@ function printQuotes() {
     fact1.textContent = "Title: " + quote.title.replaceAll("_", " ");
     oneQuoteEl.setAttribute(
       "class",
-      "card m-3 column is-offset-one-quarter is-3 is-relative is-responsive has-text-left"
+      "card m-3 column is-mobile is-offset-one-quarter is-3 is-relative is-responsive has-text-left"
     );
     oneQuoteEl.appendChild(quoteline);
     oneQuoteEl.appendChild(author);
