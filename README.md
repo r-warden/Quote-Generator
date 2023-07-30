@@ -51,9 +51,10 @@ Project was created with:
 
 ## Screenshots
 
-![Index-Page](image.png "Home Screen")
-![Retreived-Quote-Wiki]()
-![Confirmed-Save]()
+![Index-Page] (/assets/images/image-1.png "Home Screen")
+![Retrieved-Quote-Wiki](/assets/images/image-2.png "Quote Generated Screen")
+![Wikipedia-Functionality](/assets/images/image-4.png "Author Mouseover")
+![Confirmed-Save](/assets/images/image-3.png "Quote Is Saved")
 ![Saved-Quotes-Wiki]()
 
 ## Deployed Webpage
