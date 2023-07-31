@@ -1,31 +1,26 @@
 <!DOCTYPE html>
-<html class="has-background-link-dark is-overlay" lang="en">
+<html class="is-overlay" lang="en-us">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Favorite Quotes</title>
     <link rel="icon" type="image/png" sizes="16x16" href="./assets/favicon-16x16.png">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
     <link rel="stylesheet" href="./assets/style.css">
+    <title>Saved Quotes</title>
 </head>
 
 <body>
-    <header class = "columns">
-      <h1 class="title has-text-warning column m-4">
-          Saved quotes
-      </h1>    
-      <a href="index.html"><button class="button is-primary is-medium is-responsive is-flex is-clickable is-relative mt-2 column m-4">Go Back</button></a>
+    <header class="columns mb-6">
+      <h1 id="page-title" class="title column m-4">Saved Quotes</h1>    
     </header>
-<section class="section is-large">
-    <div id="quotes">
 
-    
+<section>
+    <div id="quotes" class="columns is-responsive is-centered is-flex"></div>
+
+    <div class="columns is-responsive mt-2 is-mobile is-centered">
+        <button id="clear" class="column is-flex is-2 button is-clickable is-relative">Clear</button>
+        <button onclick="window.location.href='index.html'" class="column is-flex is-2 button is-clickable is-relative ml-2">Go Back</button>
     </div>
-
-
-    <button  class="button is-primary is-medium is-responsive is-flex is-clickable is-relative mt-2" id="clear">Clear History</button>
-
-
 </section>
 
 <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
@@ -33,5 +28,4 @@
 <script src="assets/saved.js"></script>
 
 </body>
-
 </html>

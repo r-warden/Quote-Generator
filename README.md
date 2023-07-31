@@ -1,5 +1,5 @@
-# Team4-Proj1 ![](https://img.shields.io/badge/contributers-5-blue?logo=github)
-
+# Random Quote Generator ![](https://img.shields.io/badge/contributers-5-blue?logo=github)
+=======
 ## Project Title
 
 Random Quote Generator; Save your favorite quote & learn more about the author!
@@ -51,10 +51,10 @@ Project was created with:
 
 ## Screenshots
 
-![Index-Page]()
-![Retreived-Quote-Wiki]()
-![Confirmed-Save]()
-![Saved-Quotes-Wiki]()
+![Index-Page](/assets/images/image-1.png "Home Screen")
+![Retrieved-Quote-Wiki](/assets/images/image-2.png "Quote Generated Screen")
+![Wikipedia-Functionality](/assets/images/image-4.png "Author Mouseover")
+![Confirmed-Save](/assets/images/image-3.png "Quote Is Saved")
 
 ## Deployed Webpage
 

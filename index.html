@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html class="has-background-link-dark is-overlay" lang="en-us">
+<html class="is-overlay" lang="en-us">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Random Quote Generator: Inspired in Seconds</title>
-    <link rel="icon" type="image/png" sizes="16x16" href="./assets/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./assets/images/favicon-16x16.png"/>
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css"
@@ -14,57 +14,42 @@
 
   <body>
     <header class="columns">
-      <h1 class="title has-text-warning column m-4">Random Quote Generator</h1>
-
-      <a href="./quotes.html"
-        ><button
-          class="button is-medium is-responsive is-flex is-clickable is-relative m-4 column"
-        >
-          Saved Quotes
-        </button></a
-      >
+      <h1 id="page-title" class="title column m-4">Random Quote Generator</h1>
     </header>
+    
     <section class="section is-large">
-      <div class="columns">
-      <div id="quote-area" class="card has-background-light column is-6 mb-auto is-relative is-responsive">
+      <div class="columns is-responsive is-centered">
+      <div id="quote-area" class="card column is-6 m-auto is-responsive">
         <div class="card-content">
          <p id="quote" class="title">Your Quote Appears Here</p>
          <p id="author" class="subtitle"></p>
-         <p id="wiki-preview-notice"
-          >Hover over the author's name for info from their Wiki page.</p>
+         <p id="wiki-preview-notice"> Hover over the author's name to see info from their Wikipedia page.</p>
         </div>
+        <footer class="card-footer">
+          <button id="get-quote" class="button card-footer-item is-medium is-responsive is-relative is-clickable">Get Quote</button>
+          <button id="save-quote" class="button card-footer-item is-medium is-responsive is-clickable js-modal-trigger modal" data-target="modal-js-example">Save Quote</button>
+          <a href=./quotes.html class="button card-footer-item is-medium is-relative is-responsive is-clickable">View Saved Quotes</a>
+        </footer>
       </div>
-      </div>
-      <div class="columns">
-        <div class="column is-2">
-          <button
-            id="get-quote"
-            class="button is-medium is-responsive is-flex is-clickable is-relative mt-2"
-          >
-            Get Quote
-          </button>
-        </div>
-        <div class="column is-2">
-          <button
-            id="save-quote"
-            class="button is-primary is-medium is-responsive is-flex is-clickable is-hidden is-relative mt-2 js-modal-trigger modal"
-           data-target="modal-js-example">
-            Save Quote
-          </button>
-        </div>
       </div>
     </section>
+    
+    <section id="hero-banner" class="hero">
+    <div class="hero-body">
+      <div class="hero-foot">
+      </div>
+    </div>
+  </section>
     <div id="modal-js-example" class="modal">
   <div class="modal-background"></div>
 
   <div class="modal-content">
     <div class="box">
       <p>You saved a quote!</p>
-      <!-- Your content -->
+      <button class="modal-close is-medium is-responsive" aria-label="close"></button>
     </div>
   </div>
-
-  <button class="modal-close is-large" aria-label="close"></button>
+  
 </div>
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <script src="./Assets/js/wikipedia-preview.production.js"></script>

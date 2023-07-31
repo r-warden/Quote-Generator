@@ -15,7 +15,7 @@ function printQuotes() {
     author.href = "https://en.wikipedia.org/wiki/" + wikiAuthor;
     oneQuoteEl.setAttribute(
       "class",
-      "card has-background-light mb-3 is-relative is-responsive has-text-centered"
+      "card m-3 column is-mobile is-offset-one-quarter is-3 is-relative is-responsive has-text-left"
     );
     if (quote.dob!="See Wikipedia Article" || quote.title!="See Wikipedia Article"){
       fact2.textContent = "Born: " + quote.dob;

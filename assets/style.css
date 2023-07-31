@@ -1,18 +1,54 @@
-#wiki-preview-notice {
-    font-style: italic;
-    visibility: hidden;
-    font-size: 12px;
-    text-align: center;
+html {
+    background-color: #ab91bc;
+    background-image: url('/assets/images/desert_night.jpg');
 }
 
 header {
-    background-image: linear-gradient(to right, hsl(217, 71%, 53%) , #FEEEA4);
+    background-image: linear-gradient(to right, #5b5480, #ab91bc, #8798bc);
+    
+}
+
+#page-title {
+    color: aliceblue;
 }
 
 #quote {
     text-align: center;
+    font-family: Georgia, Times, 'Times New Roman', serif
 }
 
 #author {
     text-align: right;
+    font-family: Georgia, 'Times New Roman', Times, serif
+}
+
+#wiki-preview-notice {
+    font-style: italic;
+    visibility: hidden;
+    text-align: center;
+}
+
+#hero-banner {
+    background-image: linear-gradient(to left, #5b5480, #ab91bc, #8798bc);
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    align-items: end;
+}
+
+@media screen and (max-width: 1023px) {
+    #hero-banner {
+        display: none;
+    }
+    
+}
+
+/*quotes.html Styling*/
+#quotes {
+    flex-wrap: wrap
+}
+
+@media screen and (max-width:768px) {
+    #quotes {
+        flex-direction: column;
+        margin: 0;
+    }
 }
