@@ -1,6 +1,6 @@
 html {
     background-color: #ab91bc;
-    background-image: url('/assets/images/desert_night.jpg');
+    background-image: url('./images/desert_night.jpg');
 }
 
 header {
