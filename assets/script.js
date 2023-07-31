@@ -88,8 +88,8 @@ var authorInfo = function () {
               console.log(fact1);
               console.log(fact2);
             } else {
-              fact1 = "See Wikapedia Article";
-              fact2 = "See Wikapedia Article";
+              fact1 = "See Wikipedia Article";
+              fact2 = "See Wikipedia Article";
               savequote();
             }
           });
