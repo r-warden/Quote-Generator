@@ -1,14 +1,16 @@
 var quotesEl = document.getElementById("quotes");
 
+ // Retrieve saved quotes from local storage or initialize as an empty array
 function printQuotes() {
   var savedQuotes =
-    JSON.parse(window.localStorage.getItem("SavedQuotes")) || [];
-  savedQuotes.forEach(function (quote) {
-    var oneQuoteEl = document.createElement("div");
+    JSON.parse(window.localStorage.getItem("SavedQuotes")) || [];   // Iterate through each saved quote and create corresponding DOM elements
+  savedQuotes.forEach(function (quote) {    // Create the container element for each quote
+    var oneQuoteEl = document.createElement("div");   // Create elements to display the quote text, author, and additional information
     var quoteline = document.createElement("p");
     var author = document.createElement("a");
     var fact1 = document.createElement("P");
     var fact2 = document.createElement("p");
+      // Set the text content for each element based on the saved quote data
     quoteline.textContent = '"' + quote.quotesX + '"';
     author.textContent = "Author: " + quote.name;
     var wikiAuthor = quote.name.replaceAll(" ", "_");
@@ -23,7 +25,8 @@ function printQuotes() {
       quote.title != "See Wikipedia Article"
     ) {
       fact2.textContent = "Born: " + quote.dob;
-      fact1.textContent = "Title: " + quote.title.replaceAll("_", " ");
+      fact1.textContent = "Title: " + quote.title.replaceAll("_", " "); 
+      // Set the attributes and classes for the container element
       oneQuoteEl.appendChild(quoteline);
       oneQuoteEl.appendChild(author);
       oneQuoteEl.appendChild(fact1);
@@ -43,10 +46,10 @@ function printQuotes() {
     });
   });
 }
-
+// Function to clear the quote history and reload the page
 function clearHistory() {
   window.localStorage.removeItem("SavedQuotes");
   window.location.reload();
 }
 document.getElementById("clear").onclick = clearHistory;
-printQuotes();
+printQuotes(); // Print the saved quotes when the page loads
