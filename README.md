@@ -10,6 +10,7 @@ Random Quote Generator; Save your favorite quote & learn more about the author!
 - [Technologies Used](#technologies-used)
 - [Screenshots](#screenshots)
 - [Deployed Webpage](#deployed-webpage)
+- [Repository](#repository)
 
 ## Project Description
 
@@ -59,4 +60,8 @@ Project was created with:
 
 ## Deployed Webpage
 
-https://r-warden.github.io/Team4-Proj1/
+https://r-warden.github.io/Quote-Generator/
+
+## Repository
+
+https://github.com/r-warden/Quote-Generator
