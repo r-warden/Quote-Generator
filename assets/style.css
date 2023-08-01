@@ -1,3 +1,4 @@
+/* Set background color and image for the entire page */
 html {
     background-color: #ab91bc;
     background-image: url('./images/desert_night.jpg');
@@ -5,48 +6,53 @@ html {
 
 header {
     background-image: linear-gradient(to right, #5b5480, #ab91bc, #8798bc);
-    
 }
 
+/* Styling for the page title */
 #page-title {
     color: aliceblue;
 }
 
+/* Styling for the main quote text */
 #quote {
     text-align: center;
-    font-family: Georgia, Times, 'Times New Roman', serif
+    font-family: Georgia, Times, 'Times New Roman', serif;
 }
 
+/* Styling for the author's name */
 #author {
     text-align: right;
-    font-family: Georgia, 'Times New Roman', Times, serif
+    font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
+/* Styling for the notice about Wikipedia preview */
 #wiki-preview-notice {
     font-style: italic;
     visibility: hidden;
     text-align: center;
 }
 
+/* Styling for the hero banner section */
 #hero-banner {
     background-image: linear-gradient(to left, #5b5480, #ab91bc, #8798bc);
-    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     align-items: end;
 }
 
+/* Hide the hero banner section on screens smaller than 1024px */
 @media screen and (max-width: 1023px) {
     #hero-banner {
         display: none;
     }
-    
 }
 
-/*quotes.html Styling*/
+/* Styling for the quotes in the quotes.html page */
 #quotes {
-    flex-wrap: wrap
+    flex-wrap: wrap;
 }
 
-@media screen and (max-width:768px) {
+/* Adjust quotes layout for screens smaller than 769px */
+@media screen and (max-width: 768px) {
     #quotes {
         flex-direction: column;
         margin: 0;

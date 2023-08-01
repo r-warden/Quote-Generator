@@ -1,59 +1,69 @@
 <!DOCTYPE html>
 <html class="is-overlay" lang="en-us">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Random Quote Generator: Inspired in Seconds</title>
-    <link rel="icon" type="image/png" sizes="16x16" href="./assets/images/favicon-16x16.png"/>
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css"
-    />
-    <link rel="stylesheet" href="./assets/style.css" />
-  </head>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  
+  <!-- Page title and favicon -->
+  <title>Random Quote Generator: Inspired in Seconds</title>
+  <link rel="icon" type="image/png" sizes="16x16" href="./assets/images/favicon-16x16.png" />
+  
+  <!-- Load Bulma CSS framework for styling -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css" />
+  <link rel="stylesheet" href="./assets/style.css" />
+</head>
 
-  <body>
-    <header class="columns">
-      <h1 id="page-title" class="title column m-4">Random Quote Generator</h1>
-    </header>
-    
-    <section class="section is-large">
-      <div class="columns is-responsive is-centered">
+<body>
+  <header class="columns">
+    <h1 id="page-title" class="title column m-4">Random Quote Generator</h1>
+  </header>
+
+  <section class="section is-large">
+    <div class="columns is-responsive is-centered">
+      <!-- Quote display area -->
       <div id="quote-area" class="card column is-6 m-auto is-responsive">
         <div class="card-content">
-         <p id="quote" class="title">Your Quote Appears Here</p>
-         <p id="author" class="subtitle"></p>
-         <p id="wiki-preview-notice"> Hover over the author's name to see info from their Wikipedia page.</p>
+          <p id="quote" class="title">Your Quote Appears Here</p>
+          <p id="author" class="subtitle"></p>
+          <!-- Notice about hovering over the author's name for Wikipedia info -->
+          <p id="wiki-preview-notice">Hover over the author's name to see info from their Wikipedia page.</p>
         </div>
         <footer class="card-footer">
+          <!-- Button to generate a new random quote -->
           <button id="get-quote" class="button card-footer-item is-medium is-responsive is-relative is-clickable">Get Quote</button>
+          <!-- Button to save the current quote -->
           <button id="save-quote" class="button card-footer-item is-medium is-responsive is-clickable js-modal-trigger modal" data-target="modal-js-example">Save Quote</button>
-          <a href=./quotes.html class="button card-footer-item is-medium is-relative is-responsive is-clickable">View Saved Quotes</a>
+          <!-- Button to view previously saved quotes -->
+          <a href="./quotes.html" class="button card-footer-item is-medium is-relative is-responsive is-clickable">View Saved Quotes</a>
         </footer>
       </div>
-      </div>
-    </section>
-    
-    <section id="hero-banner" class="hero">
+    </div>
+  </section>
+
+  <section id="hero-banner" class="hero">
     <div class="hero-body">
       <div class="hero-foot">
       </div>
     </div>
   </section>
-    <div id="modal-js-example" class="modal">
-  <div class="modal-background"></div>
 
-  <div class="modal-content">
-    <div class="box">
-      <p>You saved a quote!</p>
-      <button class="modal-close is-medium is-responsive" aria-label="close"></button>
+  <!-- Modal for showing a message when a quote is saved -->
+  <div id="modal-js-example" class="modal">
+    <div class="modal-background"></div>
+    <div class="modal-content">
+      <div class="box">
+        <!-- Modal content to show the user that a quote has been saved -->
+        <p>You saved a quote!</p>
+        <!-- Button to close the modal -->
+        <button class="modal-close is-medium is-responsive" aria-label="close"></button>
+      </div>
     </div>
   </div>
-  
-</div>
-    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-    <script src="./assets/js/wikipedia-preview.production.js"></script>
-    <script src="./assets/js/modal.js"></script>
-    <script src="./assets/script.js"></script>
-  </body>
+
+  <!-- JavaScript libraries and custom scripts -->
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+  <script src="./assets/js/wikipedia-preview.production.js"></script>
+  <script src="./assets/js/modal.js"></script>
+  <script src="./assets/script.js"></script>
+</body>
 </html>

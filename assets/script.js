@@ -1,3 +1,4 @@
+//DOM element refrences
 var getQuoteBtn = document.getElementById("get-quote");
 var quoteEl = document.getElementById("quote");
 var authorEl = document.getElementById("author");
@@ -8,6 +9,7 @@ var currentauthor = "";
 var fact1 = "";
 var fact2 = "";
 
+// Fetch a new quote from the API based on a random category
 var getAuthor = function getAuthor(event) {
   event.preventDefault();
   var category = random_category();
@@ -48,6 +50,7 @@ var getAuthor = function getAuthor(event) {
       });
     });
 };
+// Fetch information about the author
 var authorInfo = function () {
   fetch("https://api.api-ninjas.com/v1/celebrity?name=" + currentauthor, {
     method: "GET",
@@ -59,12 +62,12 @@ var authorInfo = function () {
     })
     .then(function (data) {
       if (data[0]) {
-        fact1 = data[0].occupation[0];
-        fact2 = data[0].birthday;
+        fact1 = data[0].occupation[0]; //Extracts occupation from API response (fact1)
+        fact2 = data[0].birthday; //Extracts birthday from API response (fact2)
         savequote();
         console.log(fact1);
         console.log(fact2);
-      } else if (data[0] === undefined) {
+      } else if (data[0] === undefined) {  // If no data found, try to fetch information from historical figures API
         fetch(
           "https://api.api-ninjas.com/v1/historicalfigures?name=" +
             currentauthor,
@@ -90,12 +93,13 @@ var authorInfo = function () {
             } else {
               fact1 = "See Wikipedia Article";
               fact2 = "See Wikipedia Article";
-              savequote();
+              savequote(); // Save the quote along with the information 
             }
           });
       }
     });
 };
+// Function to get a random category from the list
 function random_category() {
   let categories = [
     "age",
@@ -168,7 +172,7 @@ function random_category() {
   ];
   return categories[Math.floor(Math.random() * categories.length)];
 }
-
+// Save the current quote along with additional information to local storage
 function savequote() {
   var savedquote = JSON.parse(window.localStorage.getItem("SavedQuotes")) || [];
   console.log(fact1);
@@ -182,5 +186,6 @@ function savequote() {
   savedquote.push(quote);
   window.localStorage.setItem("SavedQuotes", JSON.stringify(savedquote));
 }
+//Adds event listeners for btn
 savequotebtn.addEventListener("click", authorInfo);
 getQuoteBtn.addEventListener("click", getAuthor);
